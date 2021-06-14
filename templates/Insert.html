@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Inserting Values</title>
+</head>
+<body>
+<h1>Inserting Values </h1>
+{% if insert is not defined %}
+<form action="{{ url_for('insert') }}" method="post">
+ID:<input type="text" name="ID"><br>
+Case Number :<input type="text" name="Case_Number"><br>
+Date:<input type="text" name="Date"><br>
+Block :<input type="text" name="Block"><br>
+IUCR :<input type="text" name="IUCR"><br>
+Primary type:<input type="text" name="Primary_Type"><br>
+Description :<input type="text" name="Description"><br>
+Location Description :<input type="text" name="Location_Description"><br>
+<input type="radio" name="Arrest" value="TRUE" checked> Yes<br>
+<input type="radio" name="Arrest" value="FALSE"> No<br>
+<input type="radio" name="Domestic" value="TRUE" checked> Yes<br>
+<input type="radio" name="Domestic" value="FALSE"> No<br>
+Beat:<input type="text" name="Beat"><br>
+District:<input type="text" name="District"><br>
+Ward:<input type="text" name="Ward"><br>
+Community Area:<input type="text" name="Community_Area"><br>
+FBI Code:<input type="text" name="FBI_Code"><br>
+Year:<input type="text" name="Year"><br>
+Updated On:<input type="text" name="Updated_On"><br>
+<input type="submit" value="Insert">
+{% else %}
+Your inputs are inserted in {{ID}}.<br>.
+{% endif %}
+</form>
+</body>
+</html>
+
+
+

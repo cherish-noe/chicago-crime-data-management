@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      @import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #fff;
+    font-family: Arial;
+    font-size: 12px;
+    overflow:hidden;
+    background-image: url("static/images/Blue_BG.jpg");
+}
+
+.body{
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -40px;
+    bottom: -40px;
+    width: auto;
+    height: auto;
+    
+    background-size: cover;
+    -webkit-filter: blur(5px);
+    z-index: 0;
+}
+
+.grad{
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -40px;
+    bottom: -40px;
+    width: auto;
+    height: auto;
+    background-image: linear-gradient(to bottom right, #001a4d, black);
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.header{
+    position: absolute;
+    top: calc(60% - 35px);
+    left: calc(45% - 255px);
+    z-index: 2;
+}
+
+.header div{
+    float: left;
+    color: #fff;
+    font-family: 'Exo', sans-serif;
+    font-size: 35px;
+    font-weight: 200;
+}
+
+.header div span{
+    color: #5379fa !important;
+}
+
+.login{
+    position: absolute;
+    top: calc(35% - 75px);
+    left: calc(50% - 50px);
+    height: 150px;
+    width: 350px;
+    padding: 10px;
+    z-index: 2;
+}
+
+.login input[type=text]{
+    width: 250px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 2px;
+    color: #fff;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 4px;
+}
+
+.login input[type=password]{
+    width: 250px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 2px;
+    color: #fff;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 4px;
+    margin-top: 10px;
+}
+
+.login button[type=submit]{
+    width: 260px;
+    height: 35px;
+    background: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #000080;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 6px;
+    margin-top: 10px;
+}
+
+.login button[type=submit]:hover{
+    opacity: 0.9;
+    background-color:#000080;
+    border: 1px solid #000080;
+    color:#fff;
+}
+
+.login button[type=submit] i:hover{
+    background-color:#fff;
+}
+
+.login button[type=submit]:active{
+    opacity: 0.6;
+    box-shadow: 0 5px #000080;
+}
+
+.login input[type=text]:focus{
+    outline: none;
+    border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=password]:focus{
+    outline: none;
+    border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login button[type=submit]:focus{
+    outline: none;
+}
+
+::-webkit-input-placeholder{
+   color: #fff;
+}
+
+::-moz-input-placeholder{
+   color: #fff;
+}
+
+.fa-caret-square-right:hover{
+    color:#fff;
+}
+
+#cdm_logo{
+    margin-left: 200px;
+    margin-top:100px;
+}
+
+    </style>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <!--<div class="body"></div>-->
+       
+        <div class="grad"></div>
+         <div id="cdm_logo"><img src="static/images/cdm_logo.png" style="width:500px;height:400px;z-index:2;position:absolute"></div>
+        <div class="header">
+            <div>CRIME DATA<span><br/>MANAGEMENT</span></div>
+        </div>
+        <br>
+        <div class="login">
+            <div style="width:100px;margin-left:90px;margin-bottom:50px;font-size:18px"><h1>Login</h1><hr style="border:3px solid #000080"></div>
+            <form method=POST action="{{ url_for('login') }}">
+                <input type="text" class="form-control" name="username" placeholder="Username">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+                <button type="submit" value="login"><span id="effect">Continue&nbsp&nbsp&nbsp&nbsp<i class='fas fas fa-caret-square-right' style='font-size:20px;color:#000080;'></i></span></button>
+            </form>  
+        </div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  
+
+</body>
+
+</html>

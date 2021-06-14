@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+.lists th, .approved th{
+	background-color:#86b300;
+	color:white;
+}
+.lists th,td{
+	text-align:left;
+	padding:8px;
+	height:60px;
+}
+.lists .pending tr:nth-child(odd){
+	background-color:#fff5cc;
+}
+.lists .approved tr:nth-child(even){
+	background-color:#ecffb3;
+}
+.banned tr:nth-child(even){
+	background-color:#e0e0d1;
+}
+.lists table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.lists td{
+	/*border:1px solid #bfff00;*/
+	color:#264d00;
+	font-size:15px;
+}
+.lists h3{
+	color:#888844;
+	font-weight:bold;
+	font-size:23px;
+	text-align:center;
+}
+.pending th{
+	background-color:#F78536;
+	color:white;
+	border-bottom:3px solid #ff8533;
+}
+.banned th{
+	background-color:#000;
+	color:white;
+}
+
+hr.hrcss{
+	border:1px dashed #e1e1d0;
+}

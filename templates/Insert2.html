@@ -1,0 +1,60 @@
+{% extends "Insert1.html" %}
+{% block body %}
+<div class="header">
+			<div><i style="color:#336699;font-weight:bold;">ADD</i><span><br/>CRIMINAL CASE</span></div>
+	</div>
+<div class="form-container">
+	<div class="form">
+    {% if insert is not defined %}
+		<form action="{{ url_for('insert') }}" method="post">
+			<label>ID:</label>
+			<input type="text" name="ID" class="form-control" placeholder="Crime ID">
+			<label>Case Number:</label>
+			<input type="text" name="Case_Number" class="form-control" placeholder="Case Number">
+            <label>Date:</label>
+            <div id="datetimepicker">
+			<input type="datetime-local" name="Date" class="form-control" placeholder="mm/dd/yy hh:mm" format-value="MM/dd/yyyy hh:mm">
+            </div>
+            <label>Block:</label>
+			<input type="text" name="Block" class="form-control" placeholder="Address where Crime occured">
+			<label>Primary Type:</label>
+			<input type="text" name="Primary_Type" class="form-control" placeholder="Type of Crime">
+			<label>Description:</label>
+			<input type="text" name="Description" class="form-control" placeholder="Crime Description">
+            
+			<label>Arrest?</label>
+			<div class="radio-container">
+			<div class="checkboxes">
+			<label>Yes</label><input type="radio" name="Arrest" value="TRUE" checked>
+			<label>No</label><input type="radio" name="Arrest" value="FALSE">
+			</div>
+			</div>
+			<br>
+			<label>Domestic?</label><br>
+			<div class="radio-container1">
+			<div class="checkboxes">
+			<label>Yes</label><input type="radio" name="Domestic" value="TRUE" checked>
+			<label>No</label><input type="radio" name="Domestic" value="FALSE">
+			</div>
+			</div>
+			<br>
+			
+			<label>Community Area:</label>
+			<input type="text" name="Community_Area" class="form-control" placeholder="Community Number">
+			<label>Year:</label>
+			<input type="text" name="Year" class="form-control" placeholder="Year">
+			<button type="submit" value="Insert" class="btn btn-primary btn-block" onclick="alertmsg()" style="padding:15px;">Add</button>
+           {% else %}
+Your inputs are inserted in {{ID}}.<br>.
+{% endif %}
+		</form>
+	</div>
+	</div>
+ <script type="text/javascript">
+function alertmsg(){
+	window.alert("Crime Record is sucessfully added!");
+	window.location("{{ url_for('lists') }}");
+}
+</script>   
+ 
+{% endblock %}

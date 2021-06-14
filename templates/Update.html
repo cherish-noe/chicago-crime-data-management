@@ -1,0 +1,57 @@
+{% extends "Insert1.html" %}
+{% block body %}
+<div class="header">
+			<div><i style="color:#336699;font-weight:bold;">UPDATE</i><span><br/>CRIMINAL CASE</span></div>
+	</div>
+<div class="form-container">
+	<div class="form">
+<form action="/action3" method="POST">
+	{% for task in tasks %}
+		<!--Unique Object ID : {{ task['_id'] }}<br/>-->
+<input type="hidden" name="_id" value="{{ task['_id'] }}" >
+<label>ID:</label>
+<input type="text" name="ID" value="{{ task['ID'] }}" placeholder="{{ task['ID'] }}" class="form-control"><br>
+<label>Case Number:</label>
+<input type="text" name="Case_Number" value="{{ task['Case Number'] }}" placeholder="{{ task['Case Number'] }}" class="form-control"><br>
+<label>Date:</label>
+<input type="datetime-local" name="Date" value="{{ task['Date'] }}" placeholder="{{ task['Date'] }}" class="form-control"><br>
+<label>Block:</label>
+<input type="text" name="Block" value="{{ task['Block'] }}" placeholder="{{ task['Block'] }}" class="form-control"><br>
+<label>Primary Type:</label>
+<input type="text" name="Primary_Type" value="{{ task['Primary Type'] }}" placeholder="{{ task['Primary Type'] }}" class="form-control"><br>
+<label>Description:</label>
+<input type="text" name="Description" value="{{ task['Description'] }}" placeholder="{{ task['Description'] }}"><br>
+<label>Arrest?</label>
+			<div class="radio-container">
+			<div class="checkboxes">
+			<label>Yes</label><input type="radio" name="Arrest" value="TRUE" checked>
+			<label>No</label><input type="radio" name="Arrest" value="FALSE">
+			</div>
+			</div>
+			<br>
+			<label>Domestic?</label><br>
+			<div class="radio-container1">
+			<div class="checkboxes">
+			<label>Yes</label><input type="radio" name="Domestic" value="TRUE" checked>
+			<label>No</label><input type="radio" name="Domestic" value="FALSE">
+			</div>
+			</div>
+			<br>
+<label>Community Area:</label>
+<input type="text" name="Community_Area" value="{{ task['Community Area'] }}" placeholder="{{ task['Community Area'] }}" class="form-control"><br>
+<label>Year:</label>
+<input type="text" name="Year" value="{{ task['Year'] }}" placeholder="{{ task['Year'] }}" class="form-control"  ><br>
+{% endfor %}
+<button type="submit" class="btn btn-primary btn-block" style="padding:13px;" onclick="alertmsg()"> Update Task </button>
+		<br/>
+</form>
+<a href="./list">Return to List</a>
+</div>
+</div>
+<script type="text/javascript">
+function alertmsg(){
+	window.alert("Crime Record is sucessfully Updated!");
+	window.location.href='./lists';
+}
+</script>
+{% endblock %}

@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+<body>
+	<h1></h1>
+	<hr>
+	<table>
+	    <tr id="row">
+	    	<td class="Case_Number">Case_Number</td>
+	    	<td class="Date">Date</td>
+	    	<td class="Primary_Type">Primary Type</td>
+	    	<td class="Year">Year</td>
+		<td class="func">Delete</td>
+		<td class="func">Modify</td>
+	    </tr>
+		{% for c_2015_present in test_data %}
+		<tr class="datas">
+			<td>{{ c_2015_present["Case Number"] }}</td>
+			<td>{{ c_2015_present["Date"] }}</td>
+			<td>{{ c_2015_present["Primary Type"] }}</td>
+			<td>{{ c_2015_present["Year"] }}</td>
+			<td><a href="./remove?_id={{ c_2015_present['_id'] }}"><button type="submit">DELETE</button></a></td>
+			<td><a href="./update?_id={{ c_2015_present['_id'] }}"><button type="submit">EDIT</button></a></td>
+		</tr>
+		{% endfor %}
+	</table>
+	<a href="/">Return to TaskList</a>
+</body>
+</html>

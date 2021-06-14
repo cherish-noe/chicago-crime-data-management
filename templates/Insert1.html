@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{{ url_for('static',filename='css/add/reset.css')}}" rel="stylesheet">  <!-- CSS reset -->
+	<link href="{{ url_for('static',filename='css/add/style.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/style.css')}}" rel="stylesheet"> <!-- Resource style -->
+	<script src="{{ url_for('static',filename='js/modernizr.js')}}"></script> <!-- Modernizr -->
+    <script src="{{ url_for('static',filename='js/jquery-2.1.4.js')}}"></script>
+	<script src="{{ url_for('static',filename='js/main.js')}}"></script> <!-- Resource jQuery -->
+<!-- Bootstrap Core CSS -->
+<link href="{{ url_for('static',filename='css/bootstrap.css')}}" rel="stylesheet"> 
+<!-- Custom CSS -->
+<!-- font CSS -->
+<!-- font-awesome icons -->  
+<link href="{{ url_for('static',filename='css/font-awesome.css')}}" rel="stylesheet">  
+<link href="{{ url_for('static',filename='css/fontawesome-4.6.3.min.css')}}" rel="stylesheet">  
+<!-- //font-awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--skycons-icons-->
+<script src="{{ url_for('static',filename='js/skycons.js')}}"></script>
+<!--//skycons-icons-->
+ <!-- js-->
+<script src="{{ url_for('static',filename='js/bootstrap.js')}}"></script>
+<script src="{{ url_for('static',filename='js/jquery-1.11.1.min.js')}}"></script>
+<script src="{{ url_for('static',filename='js/modernizr.custom.js')}}"></script>
+<!--webfonts-->
+
+<!--//webfonts-->  
+<!-- Metis Menu -->
+<script src="{{ url_for('static',filename='js/metisMenu.min.js')}}"></script>
+<script src="{{ url_for('static',filename='js/custom.js')}}"></script>
+<!--link href="{{ url_for('static',filename='css/jquerysctipttop.css')}}" rel="stylesheet"-->
+<link href="{{ url_for('static',filename='css/custom.css')}}" rel="stylesheet">
+<link href="{{ url_for('static',filename='style.css')}}" rel="stylesheet"> 
+<!--//Metis Menu -->
+<link href="{{ url_for('static',filename='css/jquerysctipttop.css')}}" rel="stylesheet">
+<script src="{{ url_for('static',filename='js/jquery.sparkline.min.js')}}"></script>
+<style type="text/css">
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: transparent;
+    color: #80dfff;
+}
+.sidebar ul li{
+	 margin-bottom: 0.3em;
+	 color: #fff;
+}
+.fa-plus-square{
+    color: #fff;
+}
+.btn {
+    padding: 15px 12px;
+	background-color:#80dfff;
+}
+.btn-primary, .btn-primary.disabled, .btn-primary[disabled], .btn-primary.disabled.active, .btn-primary.active[disabled] {
+    background-color: #80dfff;
+    border-color: #80dfff;
+    color: #FFFFFF;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
+    outline: thin dotted;
+    outline: none;  
+}
+.btn:hover{
+	background-color:blue;
+}
+::placeholder{
+	color:#a3c2c2;
+}
+.navbar-collapse{
+	background-color: #000;
+	background-image: url("static/images/Blue_BG.jpg");
+}
+.scrollbar
+{
+	background-image: url("static/images/Blue_BG.jpg");
+}
+.cbp-spmenu{
+	
+	background-image: url("static/images/Blue_BG.jpg");
+}
+</style>
+</head> 
+	<style>
+	@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+.header{
+	position: fixed;
+	top: calc(55% - 35px);
+	left: calc(25% - 255px);
+	z-index: 2;
+	float:left;
+	
+}
+
+.header div{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 35px;
+	font-weight: 200;
+	float: left;
+}
+
+.header div span{
+	color: #5379fa !important;
+	
+}
+
+		body {
+			background: url(Blue_BG_Blurred.jpg);
+			background-size: cover;
+			font-family: Exo, Sans-serif;
+		}
+		.form-container h1 {
+			color: white;
+		}
+		.form form {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color: white;
+		}
+		.form input {
+			width: 300px;
+			margin-bottom: 20px;
+			height: 45px;
+			padding:8px;
+			color:#334d4d;
+			font-weight:bold;
+		}
+		.form input[type="radio"] {
+			height: 15px;
+		}
+		
+		.form input[type="submit"] {
+			width: 100%;
+			height: auto;
+			padding: 10px;
+			border: none;
+			background: #fff;
+			color: #000;
+			font-family: Exo, sans-serif;
+			font-size: 16px;
+		}
+
+		.form {
+			width: 300px;
+		}
+		.form label {
+			align-self: flex-start;
+			margin-bottom: 5px;
+
+		}
+		.form-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		.radio-container {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			margin-top:-25px;
+		}
+		.radio-container1 {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			margin-top:-45px;
+		}
+		.checkboxes {
+			flex-direction: row;
+		}
+		.checkboxes label{
+			color:#669999;
+		}
+	</style>
+</head>
+<body>
+<body class="cbp-spmenu-push">
+	<div class="main-content">
+		<!--left-fixed -navigation-->
+		<div class="sidebar" role="navigation">
+            <div class="navbar-collapse">
+				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right dev-page-sidebar mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar" id="cbp-spmenu-s1">
+					<div class="scrollbar scrollbar1">
+						<ul class="nav" id="side-menu">
+							<li >
+								<a href="./dashboard"><i class="fa fa-home nav_icon" style="color:#fff;"></i>Dashboard</a>
+							</li>
+							<li>
+								<a href="./list"><i class="fa fa-list-ul nav_icon" style="color:#fff;"></i>Crime Lists</a>
+							</li>
+							<li>
+								<a href="./insert" style="color:#80dfff;"><i class="fa fa-plus-square nav_icon" style="color:#80dfff;"></i>Add Crime</a>
+							</li>
+							<li>
+								<a href="./graph"><i class="fa fa-bar-chart nav_icon" style="color:#fff;"></i>Show Graphs</a>
+							</li>
+						</ul>
+					</div>
+					<!-- //sidebar-collapse -->
+				</nav>
+			</div>
+		</div>
+		<!--left-fixed -navigation-->
+		<!-- header-starts -->
+		<div class="sticky-header header-section ">
+			<div class="header-left">
+				<!--logo -->
+					<h1 id="fh5co-logo" style="width:1000px;margin-top:10px;margin-bottom:10px;"><a href="#"><img src="../static/images/cdm_logo1.png" style="width:70px;height:70px;">&nbsp;<span style="color:#000;">Crime Data</span> <span style="color:#0099cc">Management</span></a></h1>
+				<!--//logo-->
+				<div class="user-right">
+					<div class="profile_details_left"><!--notifications of menu start -->
+						<div class="profile_details">		
+							<ul>
+								<li class="dropdown profile_details_drop">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+										<div class="profile_img" style="margin-top:-10px">
+											<i class="fa fa-reddit" style="font-size:35px;color:#007399"></i>
+                                            <div class="profile_content" style="width:100px;margin-top:-30px;">
+                                            <span style="font-size:16px;font-style:oblique;font-weight:bold;color:#0099cc;">Myat Noe</span>
+                                            <!--<p style="font-size:13px;font-style:italic;color:#77773c"><?php echo $_SESSION["ADMIN_EMAIL"]; ?></p>-->
+                                            </div>
+											<div class="clearfix"></div>	
+										</div>	
+									</a>
+									<ul class="dropdown-menu drp-mnu">
+										<li> <a href="#" onClick="document.getElementById('id01').style.display='block'"><i class="fa fa-user" style="color:#239023"></i> Profile</a></li>
+                                        <li> <a href="#"><i class="fa fa-key" style="color:#e6b800"></i> Change Password</a> </li> 
+										<li> <a href="./logout"><i class="fa fa-power-off" style="color:red;"></i> Logout</a> </li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+            
+                <div class="header-right">
+				<button id="showLeftPush"><i class="fa fa-bars" style="color:#0099cc"></i></button>
+				<div class="clearfix"> </div>
+				<!--toggle button end-->
+			</div>
+			<div class="clearfix"> </div>	
+		</div>
+		<!-- //header-ends -->
+		<div id="page-wrapper" style="background-color:#f0f5f5">
+			<div class="main-page" style="background-color:#f0f5f5">
+            		<div class="four-grids" style="margin-left:3%;margin-top:2%;margin-right:3%">
+<!--
+<header>
+	<nav class="cd-stretchy-nav">
+		<a class="cd-nav-trigger" href="#0">
+			
+			<span aria-hidden="true"></span>
+		</a>
+
+		<ul>
+			<li><a href="Insert.html" class="active"><span>Insert</span></a></li>
+			<li><a href="#0"><span>Search</span></a></li>
+			<li><a href="login.html"><span>Logout</span></a></li>
+			<!-- <li><a href="#0"><span>Store</span></a></li>
+			<li><a href="login.html"><span>Logout</span></a></li> 
+		</ul>
+
+		<span aria-hidden="true" class="stretchy-nav-bg"></span>
+	</nav>
+</header>
+-->
+	
+	 {% block body %}{% endblock %}
+		<div class="copy-section">
+		<hr style="width:74%;margin-top:60px;border:1px solid #d1e0e0">
+			<p>CRIME DATA MANAGEMENT&copy; 2019. All rights reserved | Code by KE (Group:4) </p>
+			<p style="margin-top:-14px;margin-bottom:-10px;">Design Reference by <a href="http://w3layouts.com">W3layouts</a></p>
+		</div>
+	</div>
+   </div>
+   </div>
+    
+<!-- Classie -->
+<script src="{{ url_for('static',filename='js/classie.js')}}"></script>
+<script>
+					var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+						showLeftPush = document.getElementById( 'showLeftPush' ),
+						body = document.body;
+						
+					showLeftPush.onclick = function() {
+						classie.toggle( this, 'active' );
+						classie.toggle( body, 'cbp-spmenu-push-toright' );
+						classie.toggle( menuLeft, 'cbp-spmenu-open' );
+						disableOther( 'showLeftPush' );
+					};
+					
+
+					function disableOther( button ) {
+						if( button !== 'showLeftPush' ) {
+							classie.toggle( showLeftPush, 'disabled' );
+						}
+					}
+				</script>
+			<!-- Bootstrap Core JavaScript --> 
+				<script src="{{ url_for('static',filename='js/bootstrap.min.js')}}"></script>
+				<!--scrolling js-->
+				<script src="{{ url_for('static',filename='js/jquery.nicescroll.js')}}"></script>
+				<script src="{{ url_for('static',filename='js/scripts.js')}}"></script>
+				<link href="{{ url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
+               	<!--//scrolling js-->
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+var span2 = document.getElementsByClassName("close2")[0];
+span2.onclick = function() {
+    modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == (modal || modal2) ) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<!--Alert box-->
+
+
+
+
+</body>
+</html>
